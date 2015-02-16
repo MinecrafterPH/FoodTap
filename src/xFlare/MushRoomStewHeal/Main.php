@@ -23,7 +23,7 @@ class Main extends PluginBase implements Listener{
             $check = $player->getHealth();
 	    if($item == "Mushroom Stew" and $enabled === "yes" and $check !== 20) { //Checks if item is stew
             	$myhealth = $player->getHealth();
-		$sethealth = $myhealth + 3.5;
+		$sethealth = $myhealth + 6.5;
 	        $player->setHealth($sethealth);
 	        $id = 282;
                 $damage = 0;
