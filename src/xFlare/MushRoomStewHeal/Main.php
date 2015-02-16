@@ -23,9 +23,13 @@ class Main extends PluginBase implements Listener{
 		$myhealth = $player->getHealth(); //Gets health
 		$sethealth = $myhealth + 3.5; //Adds health gain to a variable
 		$player->setHeath($setheath); //Sets health
-	        //Remove soup from invetory | I dont know how to do this yet.
+		$id = 282; //Mush room stew id is 281
+            	$damage = 0;
+            	$count = 1;
+		$soup = new Item($id, $damage, $count);
+	        $player->getInventory()->remove(Item $soup);
 	        //---------------------------------\\
-		$id = 281; //Mush room stew id is 281
+		$id = 281; //bowl stew id is 281
             	$damage = 0;
             	$count = 1;
             	//After it removes the soup from the invitory, It gives a bowl
