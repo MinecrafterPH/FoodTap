@@ -32,6 +32,6 @@ class Main extends PluginBase implements Listener{
             	$count = 1;
             	//After it removes the soup from the invitory, It gives a bowl
             	$item = new Item($id, $damage, $count); //Defines item
-            	$player->getInventory()->addItem($item); //Addes item
+            	$player->getInventory()->addItem($item); //Adds item
 		}
        }
