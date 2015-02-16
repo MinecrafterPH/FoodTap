@@ -22,7 +22,6 @@ class Main extends PluginBase implements Listener{
 		$myhealth = $player->getHealth(); //Gets health
 		$sethealth = $myhealth + 3.5; //Adds health gain to a variable
 		$player->setHeath($setheath); //Sets health
-		$player->sendMessage("[MushRoomHealer] +3.5 hearts for eating Mush room soup."); //Message to confirm
 	        //Remove soup from invetory | I dont know how to do this yet.
 	        //---------------------------------\\
 		$id = 281; //Mush room stew id is 281
