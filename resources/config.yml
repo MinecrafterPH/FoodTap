@@ -11,5 +11,5 @@ enabled: "yes"
 send-message-when-stew-tapped: "no"
 
 #If the above is set to "yes", What should the message be?
-message-if-enabled: "[MRSH] +3.5 for eating stew."
+message-if-enabled: "[MRSH] +3.5 for drinking stew."
 ######
