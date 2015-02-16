@@ -20,9 +20,7 @@ class Main extends PluginBase implements Listener{
             $item = $event->getItem()->getName();
             $config = $this->getConfig();
             $enabled = $config->get("enabled");
-            $this->getLogger()->info(TEXTFORMAT::GREEN . "[MRSH] $item");
 	          if($item == "Mushroom Stew" and $enabled === "yes") { //Checks if item is stew
-		          $player->sendMessage("Debug?");
               $myhealth = $player->getHealth(); //Gets health
 		          $sethealth = $myhealth + 3.5; //Adds health gain to a variable
 		          $player->setHealth($sethealth); //Sets health
