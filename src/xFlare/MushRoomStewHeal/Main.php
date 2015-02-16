@@ -15,13 +15,13 @@ class Main extends PluginBase implements Listener{
         $this->getServer()->getPluginManager()->registerEvents($this, $this);
         $this->getLogger()->info(TEXTFORMAT::GREEN . "[MRSH] Created by xFlare has been enabled.");
       }
-        public function onTouch(PlayerInteractEvent $event){ //Detects taps and such
+        public function onTouch(PlayerInteractEvent $event){
             $player = $event->getPlayer();
             $item = $event->getItem()->getName();
             $config = $this->getConfig();
             $enabled = $config->get("enabled");
             $check = $player->getHealth();
-	    if($item == "Mushroom Stew" and $enabled === "yes" and $check !== 20) { //Checks if item is stew
+	    if($item == "Mushroom Stew" and $enabled === "yes" and $check !== 20) {
             	$myhealth = $player->getHealth();
 		$sethealth = $myhealth + 6.5;
 	        $player->setHealth($sethealth);
@@ -33,12 +33,12 @@ class Main extends PluginBase implements Listener{
 		$id = 281;
                 $damage = 0;
                 $count = 1;
-                $item = new Item($id, $damage, $count); //Defines item
-                $player->getInventory()->addItem($item); //Adds item
+                $item = new Item($id, $damage, $count);
+                $player->getInventory()->addItem($item);
                 $sendmessage = $config->get("send-message-when-stew-tapped");
                 if($sendmessage === "yes"){
             	   $message = $config->get("message-if-enabled");
-            	   $player->sendMessage($message); //Sends message if enabled.
+            	   $player->sendMessage($message);
              }
          }
      }
