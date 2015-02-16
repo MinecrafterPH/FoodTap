@@ -14,32 +14,33 @@ class Main extends PluginBase implements Listener{
         $this->saveDefaultConfig();
         $this->getServer()->getPluginManager()->registerEvents($this, $this);
         $this->getLogger()->info(TEXTFORMAT::GREEN . "[MRSH] Created by xFlare has been enabled.");
-        }
+      }
         public function onTouch(PlayerInteractEvent $event){ //Detects taps and such
             $player = $event->getPlayer();
             $item = $event->getItem()->getName();
-            $enabled = $this->getConfig->get("enabled");
-	    if($item == "mushroom_stew" and $enabled === "yes") { //Checks if item is stew
-		$myhealth = $player->getHealth(); //Gets health
-		$sethealth = $myhealth + 3.5; //Adds health gain to a variable
-		$player->setHeath($setheath); //Sets health
-		$id = 282; //Mush room stew id is 281
-            	$damage = 0;
-            	$count = 1;
-		$soup = new Item($id, $damage, $count);
-	        $player->getInventory()->remove(Item $soup);
-	        //---------------------------------\\
-		$id = 281; //bowl stew id is 281
-            	$damage = 0;
-            	$count = 1;
+            $config = $this->getConfig();
+            $enabled = $config->get("enabled")
+	          if($item == "mushroom_stew" and $enabled === "yes") { //Checks if item is stew
+		          $myhealth = $player->getHealth(); //Gets health
+		          $sethealth = $myhealth + 3.5; //Adds health gain to a variable
+		          $player->setHeath($setheath); //Sets health
+		          $id = 282; //Mush room stew id is 281
+              $damage = 0;
+              $count = 1;
+		          $soup = new Item($id, $damage, $count);
+	            $player->getInventory()->removeItem($soup);
+	           //---------------------------------\\
+		          $id = 281; //bowl stew id is 281
+              $damage = 0;
+              $count = 1;
             	//After it removes the soup from the invitory, It gives a bowl
-            	$item = new Item($id, $damage, $count); //Defines item
-            	$player->getInventory()->addItem($item); //Adds item
-            	$sendmessage = $this->getConfig->get("send-message-when-stew-tapped");
-            	if($sendmessage === "yes"){
-            		$message = $this->getConfig->get("message-if-enabled");
-            		$player->sendMessage($message); //Sends message if enabled.
-            	}
-		}
-       }
-}
+              $item = new Item($id, $damage, $count); //Defines item
+              $player->getInventory()->addItem($item); //Adds item
+              $sendmessage = $config->get("send-message-when-stew-tapped");
+              if($sendmessage === "yes"){
+            	   $message = $config->get("message-if-enabled");
+            	   $player->sendMessage($message); //Sends message if enabled.
+             }
+         }
+     }
+   }
