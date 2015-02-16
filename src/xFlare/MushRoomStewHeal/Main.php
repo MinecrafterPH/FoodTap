@@ -31,5 +31,10 @@ class Main extends PluginBase implements Listener{
             	//After it removes the soup from the invitory, It gives a bowl
             	$item = new Item($id, $damage, $count); //Defines item
             	$player->getInventory()->addItem($item); //Adds item
+            	$sendmessage = $this->getConfig->get("send-message-when-stew-tapped");
+            	if($sendmessage === "yes"){
+            		$message = $this->getConfig->get("message-if-enabled");
+            		$player->sendMessage($message); //Sends message if enabled.
+            	}
 		}
        }
