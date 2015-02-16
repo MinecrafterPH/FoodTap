@@ -13,6 +13,7 @@ class Main extends PluginBase implements Listener{
     public function onEnable(){
         $this->saveDefaultConfig();
         $this->getServer()->getPluginManager()->registerEvents($this, $this);
+        $this->getLogger()->info(TEXTFORMAT::GREEN . "[MRSH] Created by xFlare has been enabled.");
         }
         public function onTouch(PlayerInteractEvent $event){ //Detects taps and such
             $player = $event->getPlayer();
