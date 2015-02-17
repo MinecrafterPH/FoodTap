@@ -6,6 +6,9 @@
 #Enable the plugin? Change it to "yes" or "no"
 enabled: "yes"
 
+#How much health should a player get when mushroom stew is taped?
+health-earned: "3.5"
+
 ######
 # Set this to "yes" to send a message when stew is taped, Otherwise set it to "no".
 send-message-when-stew-tapped: "no"
