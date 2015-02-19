@@ -1,5 +1,5 @@
 name: MushRoomStewHeal
 main: xFlare\MushRoomStewHeal\Main
-version: "1.4.0"
+version: "1.4.1"
 api: [1.8.0]
 description: Drink mushroom stew by taping it on the ground :D
