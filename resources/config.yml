@@ -13,6 +13,6 @@ health-earned: "3.5"
 # Set this to "yes" to send a message when stew is taped, Otherwise set it to "no".
 send-message-when-stew-tapped: "no"
 
-#If the above is set to "yes", What should the message be?
+#If the above is set to "yes", what should the message be?
 message-if-enabled: "[MRSH] +3.5 hearts for drinking stew."
 ######
