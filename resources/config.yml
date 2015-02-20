@@ -14,5 +14,5 @@ health-earned: "3.5"
 send-message-when-stew-tapped: "no"
 
 #If the above is set to "yes", what should the message be?
-message-if-enabled: "[MRSH] +3.5 hearts for drinking stew."
+message-if-enabled: "+3.5 hearts for drinking stew."
 ######
