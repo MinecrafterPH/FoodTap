@@ -1,7 +1,7 @@
 # This config contains a load of extra options
 # You can enable / disable features here.
 
-#If you have no idea how to use a config dont edit this.
+#If you have no idea how to use a config don't edit this.
 
 #Enable the plugin? Change it to "yes" or "no"
 enabled: "yes"
