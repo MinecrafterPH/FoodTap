@@ -40,7 +40,7 @@ class Main extends PluginBase implements Listener{
                 $sendmessage = $config->get("send-message-when-stew-tapped");
                 if($sendmessage === "yes"){
             	   $message = $config->get("message-if-enabled");
-            	   $player->sendMessage($message);
+            	   $player->sendMessage("[MRSH] $message");
              }
          }
      }
