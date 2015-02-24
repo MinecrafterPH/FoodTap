@@ -30,12 +30,12 @@ class Main extends PluginBase implements Listener{
 	        $id = 282;
                 $damage = 0;
                 $count = 1;
-                $soup = new Item($id, $damage, $count);
+                $soup =  Item::get($id, $damage, $count);
                 $player->getInventory()->removeItem($soup);
 		$id = 281;
                 $damage = 0;
                 $count = 1;
-                $item = new Item($id, $damage, $count);
+                $item =  Item::get($id, $damage, $count);
                 $player->getInventory()->addItem($item);
                 $sendmessage = $config->get("send-message-when-stew-tapped");
                 if($sendmessage === "yes"){
