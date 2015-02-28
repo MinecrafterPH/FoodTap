@@ -2,4 +2,6 @@ name: MushRoomStewHeal
 main: xFlare\MushRoomStewHeal\Main
 version: "1.4.1"
 api: [1.8.0]
+author: xxFlare
 description: Drink mushroom stew by taping it on the ground :D
+website: https://github.com/xxFlare/MushRoomStewHeal
