@@ -1,17 +1,24 @@
 # This config contains a load of extra options
 # You can enable / disable features here.
+#All of these features are safe to turn off/on
 
 #If you have no idea how to use a config don't edit this.
 
 #Enable the plugin? Change it to "yes" or "no"
-enabled: "yes"
+enabled: true
+
+###########
+#Allow players to drink mush room stew the normal way? (No taping it)
+#Ignore this if you don't know what it means.
+allow-eat-stew-normal-way: true
+#############
 
 #How much health should a player get when mushroom stew is taped?
 health-earned: "3.5"
 
 ######
 # Set this to "yes" to send a message when stew is taped, Otherwise set it to "no".
-send-message-when-stew-tapped: "no"
+send-message-when-stew-tapped: false
 
 #If the above is set to "yes", what should the message be?
 message-if-enabled: "+3.5 hearts for drinking stew."
