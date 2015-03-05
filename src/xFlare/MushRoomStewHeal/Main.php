@@ -21,7 +21,7 @@ class Main extends PluginBase implements Listener{
             $config = $this->getConfig();
             $enabled = $config->get("enabled");
             $myhealth = $player->getHealth();
-	    if($item == "Mushroom Stew" and $enabled === "yes" and $myhealth !== 20) {
+	    if($item == "Mushroom Stew" and $enabled === true and $myhealth !== 20) {
             	$health = $config->get("health-earned");
             	$health = $health * 2;
 		$sethealth = $myhealth + $health;
@@ -37,7 +37,7 @@ class Main extends PluginBase implements Listener{
                 $item =  Item::get($id, $damage, $count);
                 $player->getInventory()->addItem($item);
                 $sendmessage = $config->get("send-message-when-stew-tapped");
-                if($sendmessage === "yes"){
+                if($sendmessage === true){
             	   $message = $config->get("message-if-enabled");
             	   $player->sendMessage("[MRSH] $message");
              }
