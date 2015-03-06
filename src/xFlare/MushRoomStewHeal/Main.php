@@ -8,8 +8,13 @@ use pocketmine\plugin\PluginBase;
 use pocketmine\utils\TextFormat;
 use pocketmine\utils\Config;
 use pocketmine\item\Item;
-
-class Main extends PluginBase implements Listener{
+    
+    public function __construct(Loader $plugin){
+        parent::__construct($plugin);
+        $this->plugin = $plugin;
+	$this->length = -1;
+    }
+ 
     public function onEnable(){
         $this->saveDefaultConfig();
         $this->getServer()->getPluginManager()->registerEvents($this, $this);
