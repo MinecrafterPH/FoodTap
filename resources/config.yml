@@ -23,3 +23,6 @@ send-message-when-stew-tapped: false
 #If the above is set to "true", what should the message be?
 message-if-enabled: "+3.5 hearts for drinking stew."
 ######
+
+#Do not change the version number.
+version: 1.5.0
