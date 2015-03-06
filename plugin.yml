@@ -1,5 +1,5 @@
 name: MushRoomStewHeal
-main: xFlare\MushRoomStewHeal\Main
+main: xFlare\MushRoomStewHeal\Loader
 version: "1.5.0"
 api: [1.8.0]
 author: xFlare
