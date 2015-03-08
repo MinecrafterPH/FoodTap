@@ -13,7 +13,13 @@ use pocketmine\item\Item;
         $this->saveDefaultConfig();
         $this->getServer()->getPluginManager()->registerEvents($this, $this);
         $this->getLogger()->info(TEXTFORMAT::GREEN . "[MRSH] Created by xFlare has been enabled.");
-      }
+        $config = $this->getConfig();
+        $version = $config->get("version");
+        if($version !== 1.5.0){
+        	$this->getLogger()->info(TEXTFORMAT::RED . "[MRSH] Seems like your config file needs to be re-updated.");
+        	$this->getLogger()->info(TEXTFORMAT::RED . "[MRSH] Please delete the config file! Then restart the server!");
+        }
+    }
     public function onDisable(){
       	$this->saveDefaultConfig();
       	$this->getServer()->getPluginManager()->registerEvents($this, $this);
