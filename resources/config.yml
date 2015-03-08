@@ -7,11 +7,11 @@
 #Enable the plugin? Change it to "true" or "false"
 enabled: true
 
-###########
+######
 #Allow players to drink mush room stew the normal way. (No taping it)
 #Ignore this if you don't know what it means.
 allow-drink-stew-normal-way: true
-#############
+######
 
 #How much health should a player get when mushroom stew is taped?
 health-earned: "3.5"
