@@ -31,7 +31,7 @@ use pocketmine\item\Item;
     	$check = $config->get("allow-drink-stew-normal-way"");
         if($item == "Mushroom Stew" and $check !== true){
         	$event->setCancelled();
-        	$player->sendMessage("[MRSH] Please tao the stew to drink it!"");
+        	$player->sendMessage("[MRSH] Please tap the stew to drink it!"");
       	}
       }
       public function onTouch(PlayerInteractEvent $event){
