@@ -8,19 +8,18 @@ use pocketmine\plugin\PluginBase;
 use pocketmine\utils\TextFormat;
 use pocketmine\utils\Config;
 use pocketmine\item\Item;
-    
-    public function __construct(Loader $plugin){
-        parent::__construct($plugin);
-        $this->plugin = $plugin;
-	$this->length = -1;
-    }
  
     public function onEnable(){
         $this->saveDefaultConfig();
         $this->getServer()->getPluginManager()->registerEvents($this, $this);
         $this->getLogger()->info(TEXTFORMAT::GREEN . "[MRSH] Created by xFlare has been enabled.");
       }
-        public function onTouch(PlayerInteractEvent $event){
+    public function onDisable(){
+      	$this->saveDefaultConfig();
+      	$this->getServer()->getPluginManager()->registerEvents($this, $this);
+      	$this->getLogger()->info(TEXTFORMAT::GREEN . "[MRSH] Created by xFlare has been disabled.");
+      }
+      public function onTouch(PlayerInteractEvent $event){
             $player = $event->getPlayer();
             $item = $event->getItem()->getName();
             $config = $this->getConfig();
