@@ -19,6 +19,15 @@ use pocketmine\item\Item;
       	$this->getServer()->getPluginManager()->registerEvents($this, $this);
       	$this->getLogger()->info(TEXTFORMAT::GREEN . "[MRSH] Created by xFlare has been disabled.");
       }
+      public function onEat(PlayerItemConsumeEvent $event) {
+    	$player = $event->getPlayer();
+    	$config = $this->getConfig();
+    	$check = $config->get("allow-drink-stew-normal-way"");
+        if($item == "Mushroom Stew" and $check !== true){
+        	$event->setCancelled();
+        	$player->sendMessage("[MRSH] Please tao the stew to drink it!"");
+      	}
+      }
       public function onTouch(PlayerInteractEvent $event){
             $player = $event->getPlayer();
             $item = $event->getItem()->getName();
