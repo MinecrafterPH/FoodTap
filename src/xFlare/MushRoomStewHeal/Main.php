@@ -8,6 +8,8 @@ use pocketmine\plugin\PluginBase;
 use pocketmine\utils\TextFormat;
 use pocketmine\utils\Config;
 use pocketmine\item\Item;
+
+class Main extends PluginBase implements Listener {
  
     public function onEnable(){
         $this->saveDefaultConfig();
