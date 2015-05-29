@@ -1,7 +1,7 @@
-name: MushRoomStewHeal
-main: xFlare\MushRoomStewHeal\Main
-version: "1.5.0"
+name: FoodTap
+main: MCPH\FoodTap\Main
+version: "1.0.0"
 api: [1.8.0]
-author: xFlare
-description: Drink mushroom stew by taping it on the ground :D
-website: https://github.com/xxFlare/MushRoomStewHeal
+author: MinecrafterPH, xFlare (original)
+description: Tap any food on the ground to eat it!
+website: https://github.com/MinecrafterPH/FoodTap
