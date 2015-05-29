@@ -56,7 +56,7 @@ class Main extends PluginBase implements Listener {
                 $sendmessage = $config->get("allow-message-stew");
                 if($sendmessage === true){
             	   $message = $config->get("message-stew");
-            	   $player->sendMessage($message);
+            	   $player->sendPopup($message);
              }
              if($item == "Steak" and $enabled === true and $myhealth !== 20) {
             	$health = $config->get("health-earned-steak");
@@ -71,7 +71,7 @@ class Main extends PluginBase implements Listener {
                 $sendmessage = $config->get("allow-message-steak");
                 if($sendmessage === true){
             	   $message = $config->get("message-steak");
-            	   $player->sendMessage($message);
+            	   $player->sendPopup($message);
              }
              if($item == "Bread" and $enabled === true and $myhealth !== 20) {
             	$health = $config->get("health-earned-bread");
@@ -86,7 +86,7 @@ class Main extends PluginBase implements Listener {
                 $sendmessage = $config->get("allow-message-bread");
                 if($sendmessage === true){
             	   $message = $config->get("message-bread");
-            	   $player->sendMessage($message);
+            	   $player->sendPopup($message);
              }
              if($item == "Melon" and $enabled === true and $myhealth !== 20) {
             	$health = $config->get("health-earned-melon");
@@ -101,7 +101,7 @@ class Main extends PluginBase implements Listener {
                 $sendmessage = $config->get("allow-message-melon");
                 if($sendmessage === true){
             	   $message = $config->get("message-melon");
-            	   $player->sendMessage($message)
+            	   $player->sendPopup($message)
              }
              if($item == "Cooked Chicken" and $enabled === true and $myhealth !== 20) {
             	$health = $config->get("health-earned-chicken");
@@ -116,7 +116,7 @@ class Main extends PluginBase implements Listener {
                 $sendmessage = $config->get("allow-message-chicken");
                 if($sendmessage === true){
             	   $message = $config->get("message-chicken");
-            	   $player->sendMessage($message)
+            	   $player->sendPopup($message)
              }
          }
      }
