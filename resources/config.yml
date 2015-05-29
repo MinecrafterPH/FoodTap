@@ -1,28 +1,41 @@
-# This config contains a load of extra options
-# You can enable/disable features here.
-#All of these features are safe to turn off/on
+# FoodTap by MinecrafterPH (based on MushRoomStewHeal by xFlare)
 
-#If you have no idea how to use a config don't edit this.
+# Notes:
+# Please place your message inside the double apostrophe.
 
 #Enable the plugin? Change it to "true" or "false"
 enabled: true
 
-######
-#Allow players to drink mush room stew the normal way. (No taping it)
-#Ignore this if you don't know what it means.
-allow-drink-stew-normal-way: true
-######
+#Allow players to eat food the normal way. (No taping it)
+eat-food-normally: true
 
-#How much health should a player get when mushroom stew is taped?
-health-earned: "3.5"
+# If you don't know the algorithm, don't edit this part.
+# Mushroom Stew
+health-earned-stew: 6
+allow-message-stew: true
+# Only edit this if you set allow-message-stew to true. (true by default)
+message-stew: "+3 hearts!"
 
-######
-# Set this to "true" to send a message when stew is taped, otherwise set it to "false".
-send-message-when-stew-tapped: false
+# Steak
+health-earned-steak: 8
+allow-message-steak: true
+# Only edit this if you set allow-message-steak to true. (true by default)
+message-steak: "+4 hearts!"
 
-#If the above is set to "true", what should the message be?
-message-if-enabled: "+3.5 hearts for drinking stew."
-######
+# Bread
+health-earned-bread: 5
+allow-message-bread: true
+# Only edit this if you set allow-message-bread to true. (true by default)
+message-bread: "+3 hearts!"
 
-#Do not change the version number.
-version: 1.5.0
+# Melon
+health-earned-melon: 2
+allow-message-melon: true
+# Only edit this if you set allow-message-melon to true. (true by default)
+message-melon: "+1 heart!"
+
+# Cooked Chicken
+health-earned-chicken: 6
+allow-message-chicken: true
+# Only edit this if you set allow-message-chicken to true. (true by default)
+message-chicken: "+3 heart!"
