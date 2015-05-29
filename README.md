@@ -1,3 +1,5 @@
 # MushRoomStewHeal
-- This plugin allows you to drink mushroom stew by taping it on the ground!
+###### Tap any food on the ground to eat it!
+
+- Original plugin by xFlare
 - This plugin is dedicated for Sean_MCPE :D
