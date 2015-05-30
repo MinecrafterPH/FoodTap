@@ -118,6 +118,36 @@ class Main extends PluginBase implements Listener {
             	   $message = $config->get("message-chicken");
             	   $player->sendPopup($message)
              }
+             if($item == "Baked Potato" and $enabled === true and $myhealth !== 20) {
+            	$health = $config->get("health-earned-potato");
+            	$health = $health * 2;
+		$sethealth = $myhealth + $health;
+	        $player->setHealth($sethealth);
+	        $id = 393;
+                $damage = 0;
+                $count = 1;
+                $food =  Item::get($id, $damage, $count);
+                $player->getInventory()->removeItem($food);
+                $sendmessage = $config->get("allow-message-potato");
+                if($sendmessage === true){
+            	   $message = $config->get("message-potato");
+            	   $player->sendPopup($message)
+             }
+             if($item == "Cooked Porkchop" and $enabled === true and $myhealth !== 20) {
+            	$health = $config->get("health-earned-porkchop");
+            	$health = $health * 2;
+		$sethealth = $myhealth + $health;
+	        $player->setHealth($sethealth);
+	        $id = 320;
+                $damage = 0;
+                $count = 1;
+                $food =  Item::get($id, $damage, $count);
+                $player->getInventory()->removeItem($food);
+                $sendmessage = $config->get("allow-message-porkchop");
+                if($sendmessage === true){
+            	   $message = $config->get("message-porkchop");
+            	   $player->sendPopup($message)
+             }
          }
      }
    }
