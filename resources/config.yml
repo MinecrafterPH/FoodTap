@@ -38,4 +38,16 @@ message-melon: "+1 heart!"
 health-earned-chicken: 6
 allow-message-chicken: true
 # Only edit this if you set allow-message-chicken to true. (true by default)
-message-chicken: "+3 heart!"
+message-chicken: "+3 hearts!"
+
+# Baked Potato
+health-earned-potato: 5
+allow-message-potato: true
+# Only edit this if you set allow-message-potato to true. (true by default)
+message-potato: "+3 hearts!"
+
+# Cooked Porkchop
+health-earned-porkchop: 8
+allow-message-porkchop: true
+# Only edit this if you set allow-message-potato to true. (true by default)
+message-porkchop: "+4 hearts!"
