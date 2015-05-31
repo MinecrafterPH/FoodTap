@@ -26,7 +26,7 @@ class Main extends PluginBase implements Listener {
     	$player = $event->getPlayer();
     	$config = $this->getConfig();
     	$check = $config->get("eat-food-normally);
-        if($item == "Mushroom Stew", "Apple", "Bread", "Steak", "Melon", "Cooked Chicken" and $check !== true){
+        if($item == "Mushroom Stew" and $item == "Apple" and $item == "Bread" and $item == "Steak" and $item == "Melon" and $item == "Cooked Chicken" and $check !== true){
         	$event->setCancelled();
         	$player->sendMessage("Please tap on the food to eat it!");
       	}
