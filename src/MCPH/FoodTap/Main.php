@@ -25,8 +25,28 @@ class Main extends PluginBase implements Listener {
       public function onEat(PlayerItemConsumeEvent $event) {
     	$player = $event->getPlayer();
     	$config = $this->getConfig();
-    	$check = $config->get("eat-food-normally);
-        if($item == "Mushroom Stew" and $item == "Apple" and $item == "Bread" and $item == "Steak" and $item == "Melon" and $item == "Cooked Chicken" and $check !== true){
+    	$check = $config->get("eat-food-normally");
+        if($item == "Mushroom Stew" and $check !== true){
+        	$event->setCancelled();
+        	$player->sendMessage("Please tap on the food to eat it!");
+      	}
+		if($item == "Apple" and $check !== true){
+        	$event->setCancelled();
+        	$player->sendMessage("Please tap on the food to eat it!");
+      	}
+		if($item == "Bread" and $check !== true){
+        	$event->setCancelled();
+        	$player->sendMessage("Please tap on the food to eat it!");
+      	}
+		if($item == "Steak" and $check !== true){
+        	$event->setCancelled();
+        	$player->sendMessage("Please tap on the food to eat it!");
+      	}
+		if($item == "Melon" and $check !== true){
+        	$event->setCancelled();
+        	$player->sendMessage("Please tap on the food to eat it!");
+      	}
+		if($item == "Cooked Chicken" and $check !== true){
         	$event->setCancelled();
         	$player->sendMessage("Please tap on the food to eat it!");
       	}
@@ -57,6 +77,7 @@ class Main extends PluginBase implements Listener {
             	   $message = $config->get("message-stew");
             	   $player->sendPopup($message);
              }
+	    }
              if($item == "Steak" and $enabled === true and $myhealth !== 20) {
             	$health = $config->get("health-earned-steak");
             	$health = $health * 2;
@@ -72,6 +93,7 @@ class Main extends PluginBase implements Listener {
             	   $message = $config->get("message-steak");
             	   $player->sendPopup($message);
              }
+            }
              if($item == "Bread" and $enabled === true and $myhealth !== 20) {
             	$health = $config->get("health-earned-bread");
             	$health = $health * 2;
@@ -87,6 +109,7 @@ class Main extends PluginBase implements Listener {
             	   $message = $config->get("message-bread");
             	   $player->sendPopup($message);
              }
+            }
              if($item == "Melon" and $enabled === true and $myhealth !== 20) {
             	$health = $config->get("health-earned-melon");
             	$health = $health * 2;
@@ -102,6 +125,7 @@ class Main extends PluginBase implements Listener {
             	   $message = $config->get("message-melon");
             	   $player->sendPopup($message)
              }
+            }
              if($item == "Cooked Chicken" and $enabled === true and $myhealth !== 20) {
             	$health = $config->get("health-earned-chicken");
             	$health = $health * 2;
@@ -117,6 +141,7 @@ class Main extends PluginBase implements Listener {
             	   $message = $config->get("message-chicken");
             	   $player->sendPopup($message)
              }
+            }
              if($item == "Baked Potato" and $enabled === true and $myhealth !== 20) {
             	$health = $config->get("health-earned-potato");
             	$health = $health * 2;
@@ -132,6 +157,7 @@ class Main extends PluginBase implements Listener {
             	   $message = $config->get("message-potato");
             	   $player->sendPopup($message)
              }
+            }
              if($item == "Cooked Porkchop" and $enabled === true and $myhealth !== 20) {
             	$health = $config->get("health-earned-porkchop");
             	$health = $health * 2;
