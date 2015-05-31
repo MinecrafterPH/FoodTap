@@ -16,7 +16,6 @@ class Main extends PluginBase implements Listener {
         $this->getServer()->getPluginManager()->registerEvents($this, $this);
         $this->getLogger()->info(TEXTFORMAT::GREEN . "FoodTap has been enabled.");
         $config = $this->getConfig();
-        }
     }
     public function onDisable(){
       	$this->saveDefaultConfig();
