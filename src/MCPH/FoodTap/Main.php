@@ -132,7 +132,7 @@ class Main extends PluginBase implements Listener {
             	$health = $health * 2;
 		$sethealth = $myhealth + $health;
 	        $player->setHealth($sethealth);
-	        $id = 360;
+	        $id = 366;
                 $damage = 0;
                 $count = 1;
                 $food =  Item::get($id, $damage, $count);
